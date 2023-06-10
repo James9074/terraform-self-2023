@@ -2,7 +2,7 @@ provider "google" {
   project     = "terraform-self-2023"
   region      = "us-east1"
   zone        = "us-east1-b"
-  credentials = vars.GOOGLE_CREDENTIALS
+  credentials = vars.gcp_credentials
 }
 
 resource "google_storage_bucket" "example_gcs_bucket" {
@@ -11,6 +11,7 @@ resource "google_storage_bucket" "example_gcs_bucket" {
   force_destroy = true
 }
 
-variable "GOOGLE_CREDENTIALS" {
-  type = string
+variable "gcp_credentials" {
+  type      = string
+  sensitive = true
 }
