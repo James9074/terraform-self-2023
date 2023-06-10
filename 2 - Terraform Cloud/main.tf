@@ -13,7 +13,7 @@ resource "google_storage_bucket" "test_bucket" {
 
 
 resource "google_compute_instance" "amazing_virtual_machine" {
-  count        = 0
+  count        = 1
   name         = "example-vm-instance"
   machine_type = "f1-micro"
   zone         = "us-east1-b"
