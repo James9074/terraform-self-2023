@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "test_bucket" {
-  name          = "tf-cloud-test-bucket"
+  name          = "self-2023-tf-cloud-test-bucket"
   location      = "US"
   force_destroy = true
 }
